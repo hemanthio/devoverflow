@@ -3,6 +3,7 @@ import './globals.css';
 import React from 'react';
 import {Inter,Space_Grotesk} from 'next/font/google'
 import { Metadata } from 'next';
+import { ThemeProvider } from '@/context/themeProvider';
 
 
 const inter=Inter({
@@ -51,7 +52,9 @@ elements:{
           </header>
           <main>
             <h1 className='h1-bold'>this is a piece of text</h1>
+            <ThemeProvider>
             {children}
+            </ThemeProvider>
           </main>
         </body>
       </html>
