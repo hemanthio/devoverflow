@@ -1,20 +1,20 @@
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { ClerkProvider} from '@clerk/nextjs'
 import './globals.css';
 import React from 'react';
 import {Inter,Space_Grotesk} from 'next/font/google'
 import { Metadata } from 'next';
-import { ThemeProvider } from '@/context/themeProvider';
+import { Provider } from '@/context/themeProvider';
 
 
 const inter=Inter({
   subsets:["latin"],
-  weight:[400,500,600,700],
+  weight:["400","500","600","700"],
   variable:"--font-inter"
 })
 
 const spaceGrotesk=Space_Grotesk({
   subsets:["latin"],
-  weight:[400,500,600,700],
+  weight:["400","500","600","700"],
   variable:"--font-grotesk"
 })
 
@@ -40,22 +40,16 @@ elements:{
 }
 
     }}>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
-          <header>
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-             
-            </SignedIn>
-          </header>
+        <Provider>
           <main>
-            <h1 className='h1-bold'>this is a piece of text</h1>
-            <ThemeProvider>
+          
+            
             {children}
-            </ThemeProvider>
+            
           </main>
+          </Provider>
         </body>
       </html>
     </ClerkProvider>
