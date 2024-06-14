@@ -58,7 +58,7 @@ const isActive = (pathname.includes(item.route)&& item.route.length>1 || pathnam
    <Image 
       src='/assets/icons/sign-up.svg' width={20} height={20}
       alt='signup'
-      className='lg:hidden'
+      className='lg:hidden '
       />
     <span className='max-lg:hidden'>Sign Up</span>
    </Button>
