@@ -6,45 +6,45 @@ import RenderTag from './RenderTag'
 
 const hotQuestions = [
   {
-    _id:1,
+    _id:"1",
     title: 'How to use React Query with TypeScript?',
   },
   {
-    _id:2,
+    _id:"2",
     title: 'How to use React Query with TypeScript?',
   },
   {
-    _id:3,
+    _id:"3",
     title: 'How to use React Query with TypeScript?',
   },
   {
-    _id:4,
+    _id:"4",
     title: 'How to use React Query with TypeScript?',
   },
   {
-    _id:5,
+    _id:"5",
     title: 'How to use React Query with TypeScript?',
   }
 ];
 
 const popularTags=[
   {
-    _id:1,
+    _id:"1",
     name: 'React',
     totalQuestions:5
   },
   {
-    _id:2,
+    _id:"2",
     name: 'Nodejs',
     totalQuestions:2
   },
   {
-    _id:3,
+    _id:"3",
     name: 'Javascript',
     totalQuestions:4
   },
   {
-    _id:4,
+    _id:"4",
     name: 'Nextjs',
     totalQuestions:3
   },
@@ -82,8 +82,7 @@ const RightSidebar = () => {
 
 <div className='mt-7 flex flex-col gap-5'>
   {popularTags.map((tag)=>(
-    <RenderTag 
-    key={tag._id} 
+    <RenderTag key={tag._id} 
     name={tag.name}
     totalQuestions={tag.totalQuestions}
     showCount 
